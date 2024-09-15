@@ -20,7 +20,7 @@ int main() {
     assert(size(42) == 'L');
     assert(size(37) == '\0');
     assert(size(39) == '\0');
-    asssert(size(41) == '\0');
+    assert(size(41) == '\0');
     assert(size(43) == '\0');
     std::cout << "All is well (maybe!)\n";
     return 0;
