@@ -19,9 +19,7 @@ class IWeatherSensor {
 /// without needing the actual Sensor during development
 
 class SensorStub : public IWeatherSensor {
-
 public:
-
     int Humidity() const override {
         return m_humidity;
     }
@@ -37,12 +35,9 @@ public:
     int WindSpeedKMPH() const override {
         return m_windSpeed;
     }
-
-
     SensorStub() :m_humidity(72), m_precipitation(70), m_temperature(26), m_windSpeed(52) {}
     SensorStub(int humidity, int precipitation, int temperature, int windspeed):m_humidity(humidity), m_precipitation(precipitation), m_temperature(temperature), m_windSpeed(windspeed) {}
-
-private:
+ private:
     int m_humidity;
     int m_precipitation;
     int m_temperature;
@@ -90,7 +85,6 @@ void TestHighPrecipitationAndLowWindspeed() {
     assert(report.find("rain") != string::npos);
 }
 }  // namespace WeatherSpace
-
 
 int main() {
     WeatherSpace::TestRainy();
