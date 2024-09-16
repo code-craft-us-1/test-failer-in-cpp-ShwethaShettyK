@@ -19,7 +19,7 @@ class IWeatherSensor {
 /// without needing the actual Sensor during development
 
 class SensorStub : public IWeatherSensor {
-public:
+ public:
     int Humidity() const override {
         return m_humidity;
     }
@@ -75,7 +75,7 @@ void TestRainy() {
 void TestHighPrecipitationAndLowWindspeed() {
     // This instance of stub needs to be different-
     // to give high precipitation (>60) and low wind-speed (<50)
-    SensorStub sensor(72,70,26,49);
+    SensorStub sensor(72, 70, 26, 49);
 
     // strengthen the assert to expose the bug
     // (function returns Sunny day, it should predict rain)
