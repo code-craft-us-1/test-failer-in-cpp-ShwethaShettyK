@@ -39,8 +39,8 @@ public:
     }
 
 
-    SensorStub() :m_humidity(72), m_precipitation(70), m_temperature(26), m_windSpeed(52) {};
-    SensorStub(int humidity, int precipitation, int temperature, int windspeed):m_humidity(humidity), m_precipitation(precipitation), m_temperature(temperature), m_windSpeed(windspeed) {};
+    SensorStub() :m_humidity(72), m_precipitation(70), m_temperature(26), m_windSpeed(52) {}
+    SensorStub(int humidity, int precipitation, int temperature, int windspeed):m_humidity(humidity), m_precipitation(precipitation), m_temperature(temperature), m_windSpeed(windspeed) {}
 
 private:
     int m_humidity;
