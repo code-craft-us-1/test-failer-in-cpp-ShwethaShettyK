@@ -87,6 +87,7 @@ void TestHighPrecipitationAndLowWindspeed() {
     string report = Report(sensor);
     assert(report.length() > 0);
     assert(report.find("Sunny") == string::npos);
+    assert(report.find("rain") != string::npos);
 }
 }  // namespace WeatherSpace
 
