@@ -30,8 +30,8 @@ int main() {
             stringList.push_back(line);
         }
     }
-    for (int i = 0; i < 5; i++){
-        for (int j = 0; j < 5; j++){
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
             int code = (i * 5+ j);
             string stringLine = stringList.at(code);
             assert(stringLine.find(std::to_string(code+1)) != string::npos);
