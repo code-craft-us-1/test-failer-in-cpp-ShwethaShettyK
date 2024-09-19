@@ -15,7 +15,7 @@ stringstream printColorMap() {
     int i = 0, j = 0;
     for (i = 0; i < numberOfMajorColors; i++) {
         for (j = 0; j < numberOfMinorColors; j++) {
-            message << i * numberOfMinorColors + j << " | " << majorColor[i] << " | " << minorColor[i] << "\n";
+            message << i*numberOfMinorColors+j<< " | " <<majorColor[i]<< " | " <<minorColor[i]<< "\n";
         }
     }
     cout << message.str();
