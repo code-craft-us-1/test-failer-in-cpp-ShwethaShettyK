@@ -1,8 +1,7 @@
 #include <assert.h>
 #include <iostream>
 
-enum class Size
-{
+enum class Size {
     XS,
     S,
     M,
@@ -14,8 +13,7 @@ enum class Size
 Size size(int cms) {
     Size sizeName = Size::Invalid;
 
-    switch(cms)
-    {
+    switch( cms){
         case 36:
             sizeName = Size::XS;
             break;
@@ -35,8 +33,7 @@ Size size(int cms) {
     return sizeName;
 }
 
-void testSize()
-{
+void testSize(){
     assert(size(36) == Size::XS);
     assert(size(38) == Size::S);
     assert(size(40) == Size::M);
