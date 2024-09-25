@@ -12,7 +12,7 @@ int minorColorsCount = sizeof(minorColor) / sizeof(minorColor[0]);
 
 stringstream printColorMap() {
     stringstream message("\n", ios_base::app | ios_base::out);
-    int i = 0, j = 0, colorcode =1;
+    int i = 0, j = 0, colorcode = 1;
     for (i = 0; i < majorColorsCount; i++) {
         for (j = 0; j < minorColorsCount; j++) {
             colorcode = (i*minorColorsCount+j)+1;
