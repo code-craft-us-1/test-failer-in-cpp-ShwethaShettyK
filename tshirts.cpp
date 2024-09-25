@@ -33,7 +33,7 @@ Size size(int cms) {
     return sizeName;
 }
 
-void testSize () {
+void testSize() {
     assert(size(36) == Size::XS);
     assert(size(38) == Size::S);
     assert(size(40) == Size::M);
