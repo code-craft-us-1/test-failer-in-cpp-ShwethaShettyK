@@ -23,26 +23,34 @@ stringstream printColorMap() {
     return message;
 }
 
-int main() {
+void testprintColorMap() {
     std::string outtext;
     stringstream result(printColorMap().str());
     string line;
-    vector<string> stringList;
+    vector<string> colormapList;
     // Loop until the end of the string
     while (getline(result, line)) {
         if (!line.empty()) {
-            stringList.push_back(line);
+            colormapList.push_back(line);
         }
     }
-    for (int i = 0; i < majorColorsCount; i++) {
-        for (int j = 0; j < minorColorsCount; j++) {
-            int code = (i * minorColorsCount+ j);
-            string stringLine = stringList.at(code);
-            assert(stringLine.find(std::to_string(code+1)) != string::npos);
+    for (int i = 0; i < numberOfMajorColors; i++)
+    {
+        for (int j = 0; j < numberOfMinorColors; j++)
+        {
+            int code = (i * numberOfMinorColors + j);
+            string stringLine = colormapList.at(code);
+            assert(stringLine.find(std::to_string(code + 1)) != string::npos);
             assert(stringLine.find(majorColor[i]) != string::npos);
             assert(stringLine.find(minorColor[j]) != string::npos);
-       }
+
+        }
     }
     std::cout << "All is well (maybe!)\n";
+}
+
+int main() {
+    testprintColorMap();
     return 0;
 }
+
