@@ -34,16 +34,13 @@ void testprintColorMap() {
             colormapList.push_back(line);
         }
     }
-    for (int i = 0; i < numberOfMajorColors; i++)
-    {
-        for (int j = 0; j < numberOfMinorColors; j++)
-        {
+    for (int i = 0; i < numberOfMajorColors; i++) {
+        for (int j = 0; j < numberOfMinorColors; j++) {
             int code = (i * numberOfMinorColors + j);
             string stringLine = colormapList.at(code);
             assert(stringLine.find(std::to_string(code + 1)) != string::npos);
             assert(stringLine.find(majorColor[i]) != string::npos);
             assert(stringLine.find(minorColor[j]) != string::npos);
-
         }
     }
     std::cout << "All is well (maybe!)\n";
